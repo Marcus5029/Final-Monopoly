@@ -7,7 +7,6 @@ public class Game {
     private Board board;
     private boolean gameRunning;
     private ScoreBoard scoreBoard;
-    private ArrayList<Player> players = new ArrayList<Player>();
     private Launcher I;
 
     Game(Launcher I, int numberOfPlayers, int cardSpacing, int cardCounts, int rows, int columns) {
@@ -39,27 +38,16 @@ public class Game {
     public void playerTurn(int xCord, int yCord) {
         Card returnCard = board.checkForCollision(xCord, yCord);
         if (returnCard != null) {
-            returnCard.setCardColor(players.get(playerTurn).getPlayerColor());
-            this.addScore( players.get(playerTurn), returnCard.getValue());
-            if (playerTurn == players.size()-1) {
-                playerTurn = 0;
-            } else {
-                playerTurn += 1;
-            }
-//            this.printScore();
+            returnCard.setCardColor(scoreBoard.getPlayerColor(playerTurn));
+            scoreBoard.addPlayerScore(playerTurn, returnCard.getValue());
+            playerTurn = (playerTurn+1)% scoreBoard.getPlayerCount();
             returnCard.setShow(true);
 
             updateFinishedGameState();
         }
     }
-    private void addScore(Player player, int playerScore) {
-        player.setPlayerScore(playerScore);
-    }
-    private void printScore() {
-        for (int i = 0; i < players.size(); i++) {
-            System.out.println(players.get(i).toString());
-        }
-    }
+
+
     public void updateFinishedGameState(){
         gameRunning = board.isBoardFinished();
     }
