@@ -18,6 +18,7 @@ import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
 public class Board extends JPanel {
+    //hi marcus
 
     private ArrayList<Square> allSquares = new ArrayList<Square>();
     private ArrayList<Square> unbuyableSquares = new ArrayList<Square>(); // squares like "Go", "Chances" etc...
