@@ -58,15 +58,15 @@ public class MonopolyMain extends JFrame{
 
         gameBoard = new Board(6,6,612,612);
         gameBoard.setBackground(new Color(51, 255, 153));
-        layeredPane.add(gameBoard, new Integer.valueOf(0));
+        layeredPane.add(gameBoard, Integer.valueOf(0));
 
         player1 = new Player(1, Color.RED);
         players.add(player1);
-        layeredPane.add(player1, new Integer.valueOf(1));
+        layeredPane.add(player1, Integer.valueOf(1));
 
         player2 = new Player(2, Color.BLUE);
         players.add(player2);
-        layeredPane.add(player2, new Integer.valueOf(1));
+        layeredPane.add(player2, Integer.valueOf(1));
 
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.LIGHT_GRAY);
@@ -125,10 +125,10 @@ public class MonopolyMain extends JFrame{
         btnPayRent.setEnabled(false);
 
         Dice dice1 = new Dice(244, 406, 40, 40);
-        layeredPane.add(dice1, new Integer.valueOf(1));
+        layeredPane.add(dice1, Integer.valueOf(1));
 
         Dice dice2 = new Dice(333, 406, 40, 40);
-        layeredPane.add(dice2, new Integer.valueOf(1));
+        layeredPane.add(dice2, Integer.valueOf(1));
 
         btnRollDice = new JButton("Roll gui.Dice");
         btnRollDice.addActionListener(new ActionListener() {
@@ -219,7 +219,7 @@ public class MonopolyMain extends JFrame{
 
                 // we have to add below 2 lines to avoid some GUI breakdowns.
                 layeredPane.remove(gameBoard);
-                layeredPane.add(gameBoard, new Integer.valueOf(0));
+                layeredPane.add(gameBoard, Integer.valueOf(0));
 
                 updatePanelPlayer1TextArea();
                 updatePanelPlayer2TextArea();
