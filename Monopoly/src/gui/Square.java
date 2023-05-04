@@ -101,17 +101,17 @@ import javax.swing.border.LineBorder;
             super.paintComponent(g);
             if(this.number == 1 || this.number == 3 || this.number == 4) {
                 g.drawRect(0, this.getHeight()-20, this.getWidth(), 20);
-                g.setColor(Color.BLUE);
+                g.setColor(Color.CYAN);
                 g.fillRect(0, this.getHeight()-20, this.getWidth(), 20);
             }
             if(this.number == 6 || this.number == 8 || this.number == 9) {
                 g.drawRect(0, 0, 20, this.getHeight());
-                g.setColor(Color.PINK);
+                g.setColor(Color.ORANGE);
                 g.fillRect(0, 0, 20, this.getHeight());
             }
             if(this.number == 11 || this.number == 13 || this.number == 14) {
                 g.drawRect(0, 0, this.getWidth(), 20);
-                g.setColor(Color.ORANGE);
+                g.setColor(Color.RED);
                 g.fillRect(0, 0, this.getWidth(), 20);
             }
             if(this.number == 16 || this.number == 17 || this.number == 19) {

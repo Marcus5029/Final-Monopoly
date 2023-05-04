@@ -57,7 +57,7 @@ public class MonopolyMain extends JFrame{
         contentIncluder.add(layeredPane);
 
         gameBoard = new Board(6,6,612,612);
-        gameBoard.setBackground(new Color(51, 255, 153));
+        gameBoard.setBackground(new Color(191, 219, 174));//change center board color!
         layeredPane.add(gameBoard, Integer.valueOf(0));
 
         player1 = new Player(1, Color.RED);
@@ -120,7 +120,7 @@ public class MonopolyMain extends JFrame{
             }
 
         });
-        btnPayRent.setBounds(210, 478, 117, 29);
+        btnPayRent.setBounds(10, 408, 117, 29);
         rightPanel.add(btnPayRent);
         btnPayRent.setEnabled(false);
 
