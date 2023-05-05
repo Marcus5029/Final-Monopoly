@@ -124,10 +124,10 @@ public class MonopolyMain extends JFrame{
         rightPanel.add(btnPayRent);
         btnPayRent.setEnabled(false);
 
-        Dice dice1 = new Dice(244, 406, 40, 40);
+        Dice dice1 = new Dice(200, 206, 40, 40);
         layeredPane.add(dice1, Integer.valueOf(1));
 
-        Dice dice2 = new Dice(333, 406, 40, 40);
+        Dice dice2 = new Dice(375, 406, 40, 40);
         layeredPane.add(dice2, Integer.valueOf(1));
 
         btnRollDice = new JButton("Roll Dice");
@@ -211,9 +211,9 @@ public class MonopolyMain extends JFrame{
 
                 btnRollDice.setEnabled(false);
                 if(doubleDiceForPlayer1 || doubleDiceForPlayer2) {
-                    infoConsole.setText("Click Next Turn to allow player "+ (nowPlaying==0 ? 1 : 2) +" to Roll gui.Dice!");
+                    infoConsole.setText("Click Next Turn to allow player "+ (nowPlaying==0 ? 1 : 2) +" to Roll Dice!");
                 } else {
-                    infoConsole.setText("Click Next Turn to allow player "+ (nowPlaying==0 ? 2 : 1) +" to Roll gui.Dice!");
+                    infoConsole.setText("Click Next Turn to allow player "+ (nowPlaying==0 ? 2 : 1) +" to Roll Dice!");
                 }
 
 
@@ -280,7 +280,7 @@ public class MonopolyMain extends JFrame{
         playerAssetsPanel.add(panelPlayer1, "1");
         panelPlayer1.setLayout(null);
 
-        JLabel panelPlayer1Title = new JLabel("gui.Player 1 All Wealth");
+        JLabel panelPlayer1Title = new JLabel("Player 1 All Wealth");
         panelPlayer1Title.setForeground(Color.WHITE);
         panelPlayer1Title.setHorizontalAlignment(SwingConstants.CENTER);
         panelPlayer1Title.setBounds(0, 6, 240, 16);
@@ -296,7 +296,7 @@ public class MonopolyMain extends JFrame{
         panelPlayer2.setLayout(null);
         c1.show(playerAssetsPanel, ""+nowPlaying);
 
-        JLabel panelPlayer2Title = new JLabel("gui.Player 2 All Wealth");
+        JLabel panelPlayer2Title = new JLabel("Player 2 All Wealth");
         panelPlayer2Title.setForeground(Color.WHITE);
         panelPlayer2Title.setHorizontalAlignment(SwingConstants.CENTER);
         panelPlayer2Title.setBounds(0, 6, 240, 16);
@@ -316,7 +316,7 @@ public class MonopolyMain extends JFrame{
         infoConsole.setBounds(6, 6, 234, 56);
         test.add(infoConsole);
         infoConsole.setLineWrap(true);
-        infoConsole.setText("PLayer 1 starts the game by clicking Roll gui.Dice!");
+        infoConsole.setText("PLayer 1 starts the game by clicking Roll Dice!");
 
     }
 
