@@ -52,8 +52,8 @@ public class MonopolyMain extends JFrame{
         contentIncluder.setLayout(null);
 
         JLayeredPane layeredPane = new JLayeredPane();
-        layeredPane.setBorder(new LineBorder(new Color(0, 0, 0)));
-        layeredPane.setBounds(6, 6, 632, 630);
+//        layeredPane.setBorder(new LineBorder(new Color(0, 0, 0)));
+        layeredPane.setBounds(225, 6, 632, 630);
         contentIncluder.add(layeredPane);
 
         gameBoard = new Board(6,6,612,612);
@@ -70,8 +70,8 @@ public class MonopolyMain extends JFrame{
 
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.LIGHT_GRAY);
-        rightPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
-        rightPanel.setBounds(634, 6, 419, 700);
+//        rightPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
+        rightPanel.setBounds(0, 6, 1100, 700);
         contentIncluder.add(rightPanel);
         rightPanel.setLayout(null);
 
@@ -90,7 +90,7 @@ public class MonopolyMain extends JFrame{
                 //turnCounter++;
             }
         });
-        btnBuy.setBounds(81, 478, 117, 29); //cordinates for the buy button
+        btnBuy.setBounds(250, 635, 117, 29); //cordinates for the buy button
         rightPanel.add(btnBuy);
         btnBuy.setEnabled(false);
 
@@ -120,7 +120,7 @@ public class MonopolyMain extends JFrame{
             }
 
         });
-        btnPayRent.setBounds(10, 575, 117, 29);//cordinates for the pay rent button
+        btnPayRent.setBounds(700, 635, 117, 29);//cordinates for the pay rent button
         rightPanel.add(btnPayRent);
         btnPayRent.setEnabled(false);
 
@@ -226,7 +226,7 @@ public class MonopolyMain extends JFrame{
 
             }
         });
-        btnRollDice.setBounds(81, 413, 246, 53);
+        btnRollDice.setBounds(820, 620, 246, 53);
         rightPanel.add(btnRollDice);
 
         btnNextTurn = new JButton("Next Turn");
@@ -261,17 +261,17 @@ public class MonopolyMain extends JFrame{
 
         });
 
-        btnNextTurn.setBounds(81, 519, 246, 53);
+        btnNextTurn.setBounds(425, 620, 235, 53);
         rightPanel.add(btnNextTurn);
         btnNextTurn.setEnabled(false);
 
         JPanel test = new JPanel();
-        test.setBounds(81, 312, 246, 68);
+        test.setBounds(840, 10, 246, 750);
         rightPanel.add(test);
         test.setLayout(null);
 
         playerAssetsPanel = new JPanel();
-        playerAssetsPanel.setBounds(81, 28, 246, 189);
+        playerAssetsPanel.setBounds(1, 8, 230, 750);
         rightPanel.add(playerAssetsPanel);
         playerAssetsPanel.setLayout(c1);
 

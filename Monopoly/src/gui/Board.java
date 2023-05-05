@@ -46,25 +46,25 @@ public class Board extends JPanel {
         // TODO Auto-generated method stub
         String[] squareNames = {
                 "Go",
-                "Oriental Ave",
+                "SMU Blvd",
                 "Community Chest",
-                "Vermont Ave",
-                "Connecticut Ave",
+                "Boaz ln",
+                "University Blvd",
                 "Just Visiting",
-                "Kentucky Ave",
+                "Airline Rd",
                 "Chance",
-                "Indiana Ave",
-                "Illinois Ave",
+                "Bush Ave",
+                "Dire St",
                 "Free Parking",
-                "St. James Place",
+                "Bishop Blvd",
                 "Community Chest",
-                "Tennessee Ave",
-                "New York Ave",
+                "McFarlin Blvd",
+                "Mockingbird Ln",
                 "Go To Jail",
-                "Pacific Ave",
-                "North Carolina Ave",
+                "Binkley Ave",
+                "Daniel Ave",
                 "Chance",
-                "Pennsylvania Ave"
+                "Hillcrest Ave"
         };
 
 
@@ -197,7 +197,7 @@ public class Board extends JPanel {
 
 
 
-        JLabel lblMonopoly = new JLabel("MONOPOLY"){
+        JLabel lblMonopoly = new JLabel("SMUNOPOLY"){
             protected void paintComponent(Graphics g) {
                 Graphics2D g2 = (Graphics2D)g;
                 g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
@@ -217,7 +217,7 @@ public class Board extends JPanel {
         lblMonopoly.setOpaque(true);
         lblMonopoly.setHorizontalAlignment(SwingConstants.CENTER);
         lblMonopoly.setFont(new Font("Lucida Grande", Font.PLAIN, 40));
-        lblMonopoly.setBounds(179, 277, 263, 55);
+        lblMonopoly.setBounds(179, 277, 283, 55);
         this.add(lblMonopoly);
 
     }
