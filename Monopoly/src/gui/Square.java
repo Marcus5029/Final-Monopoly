@@ -55,7 +55,7 @@ import javax.swing.border.LineBorder;
 
             if(rotationDegrees == 0) {
                 nameLabel = new JLabel(labelString);
-                nameLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 9));
+                nameLabel.setFont(new Font("Times New Roman", Font.PLAIN, 11));
                 nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
                 nameLabel.setBounds(0,20,this.getWidth(),20);
                 this.add(nameLabel);
@@ -79,17 +79,20 @@ import javax.swing.border.LineBorder;
                 };
                 if(rotationDegrees == 90) {
                     nameLabel.setBounds(20, 0, this.getWidth(), this.getHeight());
+                    nameLabel.setFont(new Font("Times New Roman", Font.PLAIN, 12));
                 }
                 if(rotationDegrees == -90) {
                     nameLabel.setBounds(-10, 0, this.getWidth(), this.getHeight());
+                    nameLabel.setFont(new Font("Times New Roman", Font.PLAIN, 12));
                 }
                 if(rotationDegrees == 180) {
                     nameLabel.setBounds(0, 0, this.getWidth(), this.getHeight());
+                    nameLabel.setFont(new Font("Times New Roman", Font.PLAIN, 12));
                 }
                 if(rotationDegrees == 135 || rotationDegrees == -135 || rotationDegrees == -45 || rotationDegrees == 45) {
                     nameLabel.setBounds(0, 0, this.getWidth(), this.getHeight());
+                    nameLabel.setFont(new Font("Times New Roman", Font.PLAIN, 16));
                 }
-                nameLabel.setFont(new Font("Lucida Grande", Font.PLAIN, 9));
                 nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
 
                 this.add(nameLabel);

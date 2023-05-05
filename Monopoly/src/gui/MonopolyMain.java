@@ -211,9 +211,9 @@ public class MonopolyMain extends JFrame{
 
                 btnRollDice.setEnabled(false);
                 if(doubleDiceForPlayer1 || doubleDiceForPlayer2) {
-                    infoConsole.setText("Click Next Turn to allow player "+ (nowPlaying==0 ? 1 : 2) +" to Roll Dice!");
+                    infoConsole.setText("Click Next Turn!");
                 } else {
-                    infoConsole.setText("Click Next Turn to allow player "+ (nowPlaying==0 ? 2 : 1) +" to Roll Dice!");
+                    infoConsole.setText("Click Next Turn!");
                 }
 
 
@@ -254,7 +254,7 @@ public class MonopolyMain extends JFrame{
                 c1.show(playerAssetsPanel, ""+(nowPlaying==0 ? 1 : 2)); // maps 0 to 1 and 1 to 2
                 updatePanelPlayer1TextArea();
                 updatePanelPlayer2TextArea();
-                infoConsole.setText("It's now player "+(nowPlaying==0 ? 1 : 2)+"'s turn!");
+                infoConsole.setText(+(nowPlaying==0 ? 1 : 2)+"'s turn!");
             }
 
 
@@ -280,7 +280,7 @@ public class MonopolyMain extends JFrame{
         playerAssetsPanel.add(panelPlayer1, "1");
         panelPlayer1.setLayout(null);
 
-        JLabel panelPlayer1Title = new JLabel("Player 1 All Wealth");
+        JLabel panelPlayer1Title = new JLabel("Player 1's Assets");
         panelPlayer1Title.setForeground(Color.WHITE);
         panelPlayer1Title.setHorizontalAlignment(SwingConstants.CENTER);
         panelPlayer1Title.setBounds(0, 6, 240, 16);
@@ -296,7 +296,7 @@ public class MonopolyMain extends JFrame{
         panelPlayer2.setLayout(null);
         c1.show(playerAssetsPanel, ""+nowPlaying);
 
-        JLabel panelPlayer2Title = new JLabel("Player 2 All Wealth");
+        JLabel panelPlayer2Title = new JLabel("Player 2's Assets");
         panelPlayer2Title.setForeground(Color.WHITE);
         panelPlayer2Title.setHorizontalAlignment(SwingConstants.CENTER);
         panelPlayer2Title.setBounds(0, 6, 240, 16);
@@ -316,7 +316,7 @@ public class MonopolyMain extends JFrame{
         infoConsole.setBounds(6, 6, 234, 56);
         test.add(infoConsole);
         infoConsole.setLineWrap(true);
-        infoConsole.setText("PLayer 1 starts the game by clicking Roll Dice!");
+        infoConsole.setText("PLayer 1: start the game by clicking Roll Dice!");
 
     }
 
