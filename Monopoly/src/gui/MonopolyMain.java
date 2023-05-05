@@ -316,7 +316,7 @@ public class MonopolyMain extends JFrame{
         infoConsole.setBounds(6, 6, 234, 56);
         test.add(infoConsole);
         infoConsole.setLineWrap(true);
-        infoConsole.setText("PLayer 1: start the game by clicking Roll Dice!");
+        infoConsole.setText("Player 1: start the game by clicking Roll Dice!");
 
     }
 
