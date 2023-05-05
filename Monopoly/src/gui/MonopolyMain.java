@@ -120,7 +120,7 @@ public class MonopolyMain extends JFrame{
             }
 
         });
-        btnPayRent.setBounds(10, 408, 117, 29);
+        btnPayRent.setBounds(10, 575, 117, 29);
         rightPanel.add(btnPayRent);
         btnPayRent.setEnabled(false);
 
@@ -130,7 +130,7 @@ public class MonopolyMain extends JFrame{
         Dice dice2 = new Dice(333, 406, 40, 40);
         layeredPane.add(dice2, Integer.valueOf(1));
 
-        btnRollDice = new JButton("Roll gui.Dice");
+        btnRollDice = new JButton("Roll Dice");
         btnRollDice.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
