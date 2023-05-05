@@ -71,7 +71,7 @@ public class MonopolyMain extends JFrame{
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.LIGHT_GRAY);
         rightPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
-        rightPanel.setBounds(634, 6, 419, 600);
+        rightPanel.setBounds(634, 6, 419, 700);
         contentIncluder.add(rightPanel);
         rightPanel.setLayout(null);
 
@@ -90,7 +90,7 @@ public class MonopolyMain extends JFrame{
                 //turnCounter++;
             }
         });
-        btnBuy.setBounds(81, 478, 117, 29);
+        btnBuy.setBounds(81, 478, 117, 29); //cordinates for the buy button
         rightPanel.add(btnBuy);
         btnBuy.setEnabled(false);
 
@@ -120,7 +120,7 @@ public class MonopolyMain extends JFrame{
             }
 
         });
-        btnPayRent.setBounds(10, 575, 117, 29);
+        btnPayRent.setBounds(10, 575, 117, 29);//cordinates for the pay rent button
         rightPanel.add(btnPayRent);
         btnPayRent.setEnabled(false);
 
