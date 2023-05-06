@@ -32,7 +32,7 @@ public class Player extends JPanel {
     public void withdrawFromWallet(int withdrawAmount) {
         if(withdrawAmount > wallet) {
             setVisible(false);
-            System.out.println("gui.Player "+ playerNumber + " went bankrupt!");
+            System.out.println("Player "+ playerNumber + " went bankrupt!");
         } else {
             wallet -= withdrawAmount;
         }

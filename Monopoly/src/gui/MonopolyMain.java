@@ -63,7 +63,7 @@ public class MonopolyMain extends JFrame{
         players.add(player1);
         layeredPane.add(player1, Integer.valueOf(1));
 
-        player2 = new Player(2, Color.YELLOW);
+        player2 = new Player(2, Color.PINK);
         players.add(player2);
         layeredPane.add(player2, Integer.valueOf(1));
 
@@ -245,7 +245,7 @@ public class MonopolyMain extends JFrame{
                 c1.show(playerAssetsPanel, ""+(nowPlaying==0 ? 1 : 2));
                 updatePanelPlayer1TextArea();
                 updatePanelPlayer2TextArea();
-                infoConsole.setText(+(nowPlaying==0 ? 1 : 2)+"'s turn!");
+                infoConsole.setText("Player "+(nowPlaying==0 ? 1 : 2)+"'s turn!");
             }
 
 
