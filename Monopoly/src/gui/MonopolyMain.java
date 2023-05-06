@@ -39,7 +39,7 @@ public class MonopolyMain extends JFrame{
     static int nowPlaying = 0;
     int myInt = 10;
     Integer myInteger = myInt;
-//    Integer myInteger = Integer.valueOf(myInt);
+
 
 
     public MonopolyMain() {
@@ -52,25 +52,24 @@ public class MonopolyMain extends JFrame{
         contentIncluder.setLayout(null);
 
         JLayeredPane layeredPane = new JLayeredPane();
-//        layeredPane.setBorder(new LineBorder(new Color(0, 0, 0)));
         layeredPane.setBounds(225, 6, 632, 630);
         contentIncluder.add(layeredPane);
 
         gameBoard = new Board(6,6,612,612);
-        gameBoard.setBackground(new Color(0, 0, 255));//change center board color!
+        gameBoard.setBackground(new Color(0, 0, 255));
         layeredPane.add(gameBoard, Integer.valueOf(0));
 
-        player1 = new Player(1, Color.RED);
+        player1 = new Player(1, Color.GREEN);
         players.add(player1);
         layeredPane.add(player1, Integer.valueOf(1));
 
-        player2 = new Player(2, Color.BLUE);
+        player2 = new Player(2, Color.YELLOW);
         players.add(player2);
         layeredPane.add(player2, Integer.valueOf(1));
 
         JPanel rightPanel = new JPanel();
         rightPanel.setBackground(Color.BLUE);
-//        rightPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
+
         rightPanel.setBounds(0, 6, 1100, 700);
         contentIncluder.add(rightPanel);
         rightPanel.setLayout(null);
@@ -78,7 +77,6 @@ public class MonopolyMain extends JFrame{
         btnBuy = new JButton("Buy");
         btnBuy.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                //turnCounter--; // decrease because we increased at the end of the rolldice
                 Player currentPlayer = players.get(nowPlaying);
                 infoConsole.setText("You bought "+gameBoard.getAllSquares().get(currentPlayer.getCurrentSquareNumber()).getName());
                 currentPlayer.buyTitleDeed(currentPlayer.getCurrentSquareNumber());
@@ -87,10 +85,9 @@ public class MonopolyMain extends JFrame{
                 btnBuy.setEnabled(false);
                 updatePanelPlayer1TextArea();
                 updatePanelPlayer2TextArea();
-                //turnCounter++;
             }
         });
-        btnBuy.setBounds(250, 635, 117, 29); //cordinates for the buy button
+        btnBuy.setBounds(250, 635, 117, 29);
         rightPanel.add(btnBuy);
         btnBuy.setEnabled(false);
 
@@ -99,8 +96,6 @@ public class MonopolyMain extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
-                // turnCounter--;
                 Player currentPlayer = players.get(nowPlaying);
                 Player ownerOfTheSquare = players.get((Player.ledger.get(currentPlayer.getCurrentSquareNumber()))==1?0:1);
                 infoConsole.setText("You paid to the player "+ownerOfTheSquare.getPlayerNumber());
@@ -112,15 +107,13 @@ public class MonopolyMain extends JFrame{
 
                 btnNextTurn.setEnabled(true);
                 btnPayRent.setEnabled(false);
-                //currentPlayer.withdrawFromWallet(withdrawAmount);
+
                 updatePanelPlayer1TextArea();
                 updatePanelPlayer2TextArea();
-                //turnCounter++;
-                //gameBoard.getAllSquares().get(player1.getCurrentSquareNumber()).setRentPaid(true);
             }
 
         });
-        btnPayRent.setBounds(700, 635, 117, 29);//cordinates for the pay rent button
+        btnPayRent.setBounds(700, 635, 117, 29);
         rightPanel.add(btnPayRent);
         btnPayRent.setEnabled(false);
 
@@ -135,7 +128,7 @@ public class MonopolyMain extends JFrame{
             public void actionPerformed(ActionEvent e) {
 
                 if(nowPlaying == 0) {
-                    // player1's turn
+
                     int dice1OldValue = dice1.getFaceValue();
                     int dice2OldValue = dice2.getFaceValue();
                     dice1.rollDice();
@@ -147,16 +140,16 @@ public class MonopolyMain extends JFrame{
                         doubleDiceForPlayer1 = false;
                     }
                     player1.move(dicesTotal);
-                    if(Player.ledger.containsKey(player1.getCurrentSquareNumber()) // if bought by someone
-                            && Player.ledger.get(player1.getCurrentSquareNumber()) != player1.getPlayerNumber() // not by itself
+                    if(Player.ledger.containsKey(player1.getCurrentSquareNumber())
+                            && Player.ledger.get(player1.getCurrentSquareNumber()) != player1.getPlayerNumber()
                     ) {
                         btnBuy.setEnabled(false);
                         btnRollDice.setEnabled(false);
                         btnNextTurn.setEnabled(false);
                         btnPayRent.setEnabled(true);
                     }
-                    if (Player.ledger.containsKey(player1.getCurrentSquareNumber()) // if bought by someone
-                            && Player.ledger.get(player1.getCurrentSquareNumber()) == player1.getPlayerNumber()) { // and by itself
+                    if (Player.ledger.containsKey(player1.getCurrentSquareNumber())
+                            && Player.ledger.get(player1.getCurrentSquareNumber()) == player1.getPlayerNumber()) {
                         btnBuy.setEnabled(false);
                         btnPayRent.setEnabled(false);
                         btnNextTurn.setEnabled(true);
@@ -164,7 +157,7 @@ public class MonopolyMain extends JFrame{
                     if(gameBoard.getUnbuyableSquares().contains(gameBoard.getAllSquares().get(player1.getCurrentSquareNumber()))) {
                         btnBuy.setEnabled(false);
                         btnNextTurn.setEnabled(true);
-                    } else if (!Player.ledger.containsKey(player1.getCurrentSquareNumber())) { // if not bought by someone
+                    } else if (!Player.ledger.containsKey(player1.getCurrentSquareNumber())) {
                         btnBuy.setEnabled(true);
                         btnNextTurn.setEnabled(true);
                         btnPayRent.setEnabled(false);
@@ -184,16 +177,16 @@ public class MonopolyMain extends JFrame{
                         doubleDiceForPlayer2 = false;
                     }
                     player2.move(dicesTotal);
-                    if(Player.ledger.containsKey(player2.getCurrentSquareNumber()) // if bought by someone
-                            && Player.ledger.get(player2.getCurrentSquareNumber()) != player2.getPlayerNumber() // not by itself
+                    if(Player.ledger.containsKey(player2.getCurrentSquareNumber())
+                            && Player.ledger.get(player2.getCurrentSquareNumber()) != player2.getPlayerNumber()
                     ) {
                         btnBuy.setEnabled(false);
                         btnRollDice.setEnabled(false);
                         btnNextTurn.setEnabled(false);
                         btnPayRent.setEnabled(true);
                     }
-                    if(Player.ledger.containsKey(player2.getCurrentSquareNumber()) // if bought by someone
-                            && Player.ledger.get(player2.getCurrentSquareNumber()) == player2.getPlayerNumber()) { // and by itself
+                    if(Player.ledger.containsKey(player2.getCurrentSquareNumber())
+                            && Player.ledger.get(player2.getCurrentSquareNumber()) == player2.getPlayerNumber()) {
                         btnBuy.setEnabled(false);
                         btnPayRent.setEnabled(false);
 
@@ -201,7 +194,7 @@ public class MonopolyMain extends JFrame{
                     if(gameBoard.getUnbuyableSquares().contains(gameBoard.getAllSquares().get(player2.getCurrentSquareNumber()))) {
                         btnBuy.setEnabled(false);
                         btnNextTurn.setEnabled(true);
-                    } else if (!Player.ledger.containsKey(player2.getCurrentSquareNumber())) { // if not bought by someone
+                    } else if (!Player.ledger.containsKey(player2.getCurrentSquareNumber())) {
                         btnBuy.setEnabled(true);
                         btnNextTurn.setEnabled(true);
                         btnPayRent.setEnabled(false);
@@ -217,7 +210,6 @@ public class MonopolyMain extends JFrame{
                 }
 
 
-                // we have to add below 2 lines to avoid some GUI breakdowns.
                 layeredPane.remove(gameBoard);
                 layeredPane.add(gameBoard, Integer.valueOf(0));
 
@@ -234,7 +226,6 @@ public class MonopolyMain extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                // TODO Auto-generated method stub
                 btnRollDice.setEnabled(true);
                 btnBuy.setEnabled(false);
                 btnPayRent.setEnabled(false);
@@ -251,7 +242,7 @@ public class MonopolyMain extends JFrame{
                 }
 
 
-                c1.show(playerAssetsPanel, ""+(nowPlaying==0 ? 1 : 2)); // maps 0 to 1 and 1 to 2
+                c1.show(playerAssetsPanel, ""+(nowPlaying==0 ? 1 : 2));
                 updatePanelPlayer1TextArea();
                 updatePanelPlayer2TextArea();
                 infoConsole.setText(+(nowPlaying==0 ? 1 : 2)+"'s turn!");
@@ -322,7 +313,6 @@ public class MonopolyMain extends JFrame{
 
 
     public void updatePanelPlayer2TextArea() {
-        // TODO Auto-generated method stub
         String result = "";
         result += "Current Balance: "+player2.getWallet()+"\n";
 
@@ -335,7 +325,6 @@ public class MonopolyMain extends JFrame{
     }
 
     public void updatePanelPlayer1TextArea() {
-        // TODO Auto-generated method stub
         String result = "";
         result += "Current Balance: "+player1.getWallet()+"\n";
 

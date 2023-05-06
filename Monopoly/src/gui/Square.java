@@ -60,8 +60,6 @@ import javax.swing.border.LineBorder;
                 nameLabel.setBounds(0,20,this.getWidth(),20);
                 this.add(nameLabel);
             } else {
-                // rotating a Jlabel: https://www.daniweb.com/programming/software-development/threads/390060/rotate-jlabel-or-image-in-label
-
                 nameLabel = new JLabel(labelString) {
                     protected void paintComponent(Graphics g) {
                         Graphics2D g2 = (Graphics2D)g;

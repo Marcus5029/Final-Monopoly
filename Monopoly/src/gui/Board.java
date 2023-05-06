@@ -23,7 +23,7 @@ public class Board extends JPanel {
     //hi marcus
 
     private ArrayList<Square> allSquares = new ArrayList<Square>();
-    private ArrayList<Square> unbuyableSquares = new ArrayList<Square>(); // squares like "Go", "Chances" etc...
+    private ArrayList<Square> unbuyableSquares = new ArrayList<Square>();
 
     public ArrayList<Square> getUnbuyableSquares(){
         return unbuyableSquares;
@@ -45,7 +45,6 @@ public class Board extends JPanel {
     }
 
     private void initializeSquares() {
-        // TODO Auto-generated method stub
         ArrayList<String> squareNames = new ArrayList<>();
         try{
             File file = new File("PropertyNames.txt");
@@ -88,7 +87,7 @@ public class Board extends JPanel {
         allSquares.add(square05);
         unbuyableSquares.add(square05);
 
-        // squares on the right
+
         Square square06 = new Square(506,106,100,100,squareNames.get(6),-90);
         this.add(square06);
         allSquares.add(square06);
@@ -111,7 +110,6 @@ public class Board extends JPanel {
         allSquares.add(square10);
         unbuyableSquares.add(square10);
 
-        // squares on the bottom
         Square square11 = new Square(406,506,100,100,squareNames.get(11),0);
         this.add(square11);
         allSquares.add(square11);
@@ -134,7 +132,6 @@ public class Board extends JPanel {
         allSquares.add(square15);
         unbuyableSquares.add(square15);
 
-        // squares on the left
         Square square16 = new Square(6,406,100,100,squareNames.get(16),90);
         this.add(square16);
         allSquares.add(square16);
@@ -152,24 +149,22 @@ public class Board extends JPanel {
         this.add(square19);
         allSquares.add(square19);
 
-        // setting prices
-        square01.setPrice(100);
-        square03.setPrice(100);
-        square04.setPrice(120);
+        square01.setPrice(200);
+        square03.setPrice(200);
+        square04.setPrice(220);
 
-        square06.setPrice(140);
-        square08.setPrice(140);
-        square09.setPrice(160);
+        square06.setPrice(240);
+        square08.setPrice(240);
+        square09.setPrice(260);
 
-        square11.setPrice(180);
-        square13.setPrice(180);
-        square14.setPrice(200);
+        square11.setPrice(280);
+        square13.setPrice(280);
+        square14.setPrice(300);
 
-        square16.setPrice(300);
-        square17.setPrice(300);
-        square19.setPrice(320);
+        square16.setPrice(400);
+        square17.setPrice(400);
+        square19.setPrice(420);
 
-        // setting rent prcies
         square01.setRentPrice(6);
         square03.setRentPrice(6);
         square04.setRentPrice(8);
@@ -205,7 +200,7 @@ public class Board extends JPanel {
             }
         };
         lblMonopoly.setForeground(Color.WHITE);
-        lblMonopoly.setBackground(Color.RED);
+        lblMonopoly.setBackground(Color.BLACK);
         lblMonopoly.setOpaque(true);
         lblMonopoly.setHorizontalAlignment(SwingConstants.CENTER);
         lblMonopoly.setFont(new Font("Lucida Grande", Font.PLAIN, 40));
