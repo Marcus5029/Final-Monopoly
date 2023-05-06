@@ -19,6 +19,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
+//Zelda Shirk & Marcus Smith
+//CRCP3305 Final Project
+
 public class Board extends JPanel {
     //hi marcus
 

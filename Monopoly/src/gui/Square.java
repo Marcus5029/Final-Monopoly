@@ -14,6 +14,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
+//Zelda Shirk & Marcus Smith
+//CRCP3305 Final Project
+
     public class Square extends JPanel {
 
         int number;

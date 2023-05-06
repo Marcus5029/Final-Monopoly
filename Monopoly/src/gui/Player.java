@@ -10,6 +10,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
+//Zelda Shirk & Marcus Smith
+//CRCP3305 Final Project
+
 public class Player extends JPanel {
 
     private int playerNumber;

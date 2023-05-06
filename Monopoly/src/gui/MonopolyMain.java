@@ -17,6 +17,9 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 
+//Zelda Shirk & Marcus Smith
+//CRCP3305 Final Project
+
 public class MonopolyMain extends JFrame{
 
     private JPanel contentIncluder;
