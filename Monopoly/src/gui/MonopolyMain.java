@@ -57,7 +57,7 @@ public class MonopolyMain extends JFrame{
         contentIncluder.add(layeredPane);
 
         gameBoard = new Board(6,6,612,612);
-        gameBoard.setBackground(new Color(191, 219, 174));//change center board color!
+        gameBoard.setBackground(new Color(0, 0, 255));//change center board color!
         layeredPane.add(gameBoard, Integer.valueOf(0));
 
         player1 = new Player(1, Color.RED);
@@ -69,7 +69,7 @@ public class MonopolyMain extends JFrame{
         layeredPane.add(player2, Integer.valueOf(1));
 
         JPanel rightPanel = new JPanel();
-        rightPanel.setBackground(Color.LIGHT_GRAY);
+        rightPanel.setBackground(Color.BLUE);
 //        rightPanel.setBorder(new LineBorder(new Color(0, 0, 0)));
         rightPanel.setBounds(0, 6, 1100, 700);
         contentIncluder.add(rightPanel);
@@ -226,7 +226,7 @@ public class MonopolyMain extends JFrame{
 
             }
         });
-        btnRollDice.setBounds(820, 620, 246, 53);
+        btnRollDice.setBounds(840, 7, 246, 700);
         rightPanel.add(btnRollDice);
 
         btnNextTurn = new JButton("Next Turn");
